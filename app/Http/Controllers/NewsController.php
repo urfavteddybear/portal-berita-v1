@@ -18,8 +18,8 @@ class NewsController extends Controller
     {
         $news = new NewsCollection(News::OrderByDesc('id')->paginate(8));
         return Inertia::render('Homepage', [
-            'title' => "DaisyUniverse News Portal",
-            'description' => "Selamat Datang Di DaisyUniverse News Portal",
+            'title' => "News Portal",
+            'description' => "Selamat Datang Di News Portal",
             'news' => $news,
         ]);
     }
